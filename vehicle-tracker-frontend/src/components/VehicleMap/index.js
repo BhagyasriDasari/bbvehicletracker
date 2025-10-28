@@ -44,7 +44,7 @@ class VehicleMap extends Component {
   // Fetch current vehicle position from backend
   fetchVehicleData = () => {
     axios
-      .get("http://localhost:5000/api/vehicle")
+      .get("https://bbvehicletrackerbackend.onrender.com/api/vehicle")
       .then((res) => {
         const { lat, lng } = res.data.location;
         const newPosition = [lat, lng];
